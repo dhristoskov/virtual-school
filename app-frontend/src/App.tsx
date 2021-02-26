@@ -1,9 +1,13 @@
 import React from 'react';
 
+import './App.scss'
+
+import Dashboard from './pages/dashboard/Dashboard';
+
 const App:React.FC = () => {
   return (
     <div className="App">
-      <p>React</p> 
+      <Dashboard />
     </div>
   );
 }
