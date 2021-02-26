@@ -1,33 +1,19 @@
 import React from 'react';
-import { 
-    IoSchoolOutline, 
-    IoMailOutline, 
-    IoNotificationsOutline, 
-    IoPencilOutline,
-    IoLogOutOutline
-} from 'react-icons/io5';
 
-//IoMailUnreadOutline - incoming message
-//IoNotifications - has notification
+import { IoSchoolOutline } from 'react-icons/io5';
 
 import './Header.scss';
+
+import HeaderOptions from './header-options/HeaderOptions';
 
 const Header = () => {
     return (
         <div className='header-main'>
             <p className='header-main-logo'>Virtual School</p>
-            <p className='header-main-school'><IoSchoolOutline /><span>Test School Name - Munich</span></p>
-            <div className='header-main-menu'>
-                <div className='header-main-menu--buttons'>
-                    <IoPencilOutline />
-                    <IoNotificationsOutline />
-                    <IoMailOutline />
-                </div>  
-                <div className='header-main-menu--teacher'>
-                    <p>Teacher's name</p>
-                </div>         
-                <p className='header-main-menu--logout'><IoLogOutOutline /></p>
-            </div>
+            <p className='header-main-school'><IoSchoolOutline />
+                <span className='header-main-school--title'>Test School Name - Munich</span>
+            </p>
+            <HeaderOptions />
         </div>
     );
 }

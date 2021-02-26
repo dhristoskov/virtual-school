@@ -1,0 +1,33 @@
+@import '../../../styles/font-sizes';
+@import '../../../styles/colors';
+
+.header-options {
+    width: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    align-items: center;
+
+    &-menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 65%;
+        font-size: $medium-size;
+        color: $color-button;
+        cursor: pointer;
+        margin-right: 45px;
+
+        &--teacher {
+            font-size: 14px;
+            color: $color-white;
+            cursor: auto;
+        }
+    }
+
+    &-logout {
+        font-size: $medium-size;
+        color: $color-button;
+        cursor: pointer;
+    }
+}
