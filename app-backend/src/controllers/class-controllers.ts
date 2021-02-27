@@ -10,7 +10,7 @@ import TeacherInterface from '../interfaces/teacher-interface';
 export const getAllClasses = async ( req: Request, res: Response ) => {
     let classes: ClassInterface[] = [];
     try{
-        classes = await Class.find().sort({first_name: 1}).exec();
+        classes = await Class.find().sort({first_name: 1}).populate('lead_teacher').populate('students').exec();
     }catch(err){
         console.error(err.message || 'Something went wrong');
         res.status(500).send({msg: 'Fatching classes failed, please try again'});

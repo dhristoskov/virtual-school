@@ -4,7 +4,7 @@ import { IoSchoolOutline } from 'react-icons/io5';
 
 import './Header.scss';
 
-import HeaderOptions from './header-options/HeaderOptions';
+import HeaderOptions from './HeaderOptions/HeaderOptions';
 
 const Header = () => {
     return (

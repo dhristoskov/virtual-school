@@ -1,0 +1,13 @@
+@import '../../styles/colors';
+
+.alert-message {
+    position: absolute;
+    right: 3%;
+    top: 10%;
+    width: 30%;
+    background-color: $green-alert;
+
+    &-content {
+        padding: 10px 0 10px 20px;
+    }
+}

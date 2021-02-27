@@ -1,0 +1,35 @@
+@import '../../styles/colors';
+@import '../../styles/font-sizes';
+
+.side-menu {
+    width: 15%;
+    height: 92vh;
+    background-color: $color-dark-green;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &-item {
+        width: 100%;
+        padding: 10px 0 10px 10px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 18px;
+        color: $color-button;
+        cursor: pointer;
+        border-bottom: 1px solid $color-button;
+        transition: all .5s ease;
+
+        &--title {
+            font-size: $default-size;
+            margin-left: 10px;
+        }
+
+        &:hover {
+            background-color: $color-button;
+            color: $color-white;
+        }
+    }
+}

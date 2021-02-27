@@ -1,13 +1,14 @@
 import React from 'react'
 
-import Header from '../../components/header/Header';
-import MainMenu from '../../components/menu/MainMenu';
+import Header from '../../components/Header/Header';
+import SideMenu from '../../components/SideMenu/SideMenu';
 
 const Dashboard = () => {
+
     return (
         <div>
             <Header />
-            <MainMenu />
+            <SideMenu />
         </div>
        
     );
