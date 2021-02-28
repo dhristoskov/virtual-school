@@ -21,7 +21,7 @@ const HeaderOptions = () => {
                 <IoNotificationsOutline />
                 <IoMailOutline />
                 <div className='header-options-menu--teacher'>
-                    <p>Teacher's name</p>
+                    <p>Administrator</p>
                 </div>
             </div>  
             <IoLogOutOutline className='header-options-logout'/>
