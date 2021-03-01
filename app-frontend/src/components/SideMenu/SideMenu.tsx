@@ -1,16 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import AdminPanel from './AdminPanel/AdminPanel';
 import Navigation from './Navigation/Navigation';
+import { DataContext } from '../../context/DataContext';
 
 import './SideMenu.scss';
 
-interface Props {
-    loadTeachers: () => void;
-    loadSubjects: () => void;
-}
+const SideMenu= () => {
 
-const SideMenu:React.FC<Props> = ({ loadTeachers, loadSubjects }) => {
+    const { loadTeachers, loadSubjects } = useContext(DataContext)
 
     return (
         <div className='side-menu'>

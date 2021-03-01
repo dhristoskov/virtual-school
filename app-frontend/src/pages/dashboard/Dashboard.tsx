@@ -1,19 +1,12 @@
-import React, { useContext } from 'react'
+import React from 'react'
 
-import Header from '../../components/Header/Header';
-import SideMenu from '../../components/SideMenu/SideMenu';
-import { DataContext } from '../../context/DataContext';
+import './Dashboard.scss';
 
 const Dashboard = () => {
 
-    const { loadTeachers, loadSubjects } = useContext(DataContext)
-
     return (
         <div>
-            <Header />
-            <SideMenu loadTeachers={loadTeachers}
-                      loadSubjects={loadSubjects}
-            />
+           <p>Dashboard</p> 
         </div>
        
     );

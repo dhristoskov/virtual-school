@@ -1,4 +1,5 @@
 import React, { createContext, ReactNode, useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 import axios from '../axios';
 
@@ -20,13 +21,16 @@ export const DataContext = createContext<DataType>({} as DataType);
 
 const DataContextProvider: React.FC<Props> = ({ children }) => {
 
+    const history = useHistory();
     const [ teachers, setTeachers ] = useState<Teacher[]>([] as Teacher[]);
     const [ subjects, setSubjects ] = useState<Subject[]>([] as Subject[]);
 
     const loadTeachers = (): void => {
         axios.get('/teachers/')
              .then(res => {
-                setTeachers(res.data.teachersData)
+                setTeachers(res.data.teachersData);
+                console.log(res.data.teachersData);
+                history.push('/admin/teachers');
              }).catch(err => {
                  console.log(err)
              })
@@ -35,10 +39,11 @@ const DataContextProvider: React.FC<Props> = ({ children }) => {
     const loadSubjects = (): void => {
         axios.get('/subjects/')
              .then(res => {
-                setSubjects(res.data.subjectData)
+                setSubjects(res.data.subjectData);
+                history.push('/admin/subjects');
              }).catch(err => {
                  console.log(err)
-             })
+             });
     }
 
     return (

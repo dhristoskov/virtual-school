@@ -10,7 +10,7 @@ import TeacherInterface from '../interfaces/teacher-interface';
 export const getAllSubjects = async ( req: Request, res: Response ) => {
     let subjects: SubjectInterface[] = [];
     try{
-        subjects = await Subject.find().sort({subject_name: 1}).exec();
+        subjects = await Subject.find().sort({subject_name: 1}).populate('teachers').exec();
     }catch(err){
         console.error(err.message);
         res.status(500).send({msg: 'Fatching subjects failed, please try again'});
