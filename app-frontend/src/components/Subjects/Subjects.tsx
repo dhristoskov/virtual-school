@@ -2,6 +2,10 @@ import React, { Fragment, useContext } from 'react';
 
 import { DataContext } from '../../context/DataContext';
 
+import Subject from '../../interfaces/subject';
+import SubjectItem from './SubjectItem/SubjectItem';
+import ItemForm from './ItemFrom/ItemFrom';
+
 import './Subjects.scss';
 
 const Subjects = () => {
@@ -14,26 +18,16 @@ const Subjects = () => {
                 subjects ? 
                 <div className='subject-wrapper'>
                 {
-                    subjects.map(subject => {
+                    subjects.map((subject: Subject) => {
                         return (
-                            <div key={subject._id}>
-                                <p>{subject.subject_name}</p>
-                                <p>{subject.for_class}</p>
-                                <div>
-                                    {
-                                        subject.teachers.length > 0 &&
-                                        subject.teachers.map(teacher => (
-                                            <p key={teacher._id}>{teacher.first_name}<span> {teacher.last_name}</span></p>
-                                        ))
-                                    }
-                                </div>
-                            </div>
+                            <SubjectItem key={subject._id} subject={subject} />
                         )
                     })
                 } 
                 </div>
                 : <p>Loading...</p>
             }
+            <ItemForm />
         </Fragment>
     )
 

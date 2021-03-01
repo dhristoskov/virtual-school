@@ -1,0 +1,72 @@
+@import '../../../styles/colors';
+@import '../../../styles/font-sizes';
+
+.subjectitem-wrapper {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid $color-dark-green;
+
+    &-name, &-class {
+        flex-basis: 30%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: $default-size;
+        color: $color-button;
+    }
+
+    &-edit {
+        font-size: 16px;
+        color: $color-dark-green;
+        transition: all .5s ease;
+        cursor: pointer;
+
+        &:hover {
+            color: $color-button;
+        }
+    }
+
+    &-title {
+        font-size: $small-size;
+        color: $color-dark-green;
+        margin-left: 5px;
+    }
+    
+    &-class {
+        flex-basis: 5%;
+    }
+
+    &-icon {
+        font-size: $default-size;
+        color: $color-button;
+        margin:0 5px 0 30px;
+    }
+
+    &-teachers {
+        display: flex;
+        width: 60%;
+
+        &--item {
+            font-size: $small-size;
+            color: $color-dark-green;
+            margin-right: 10px;
+            transition: all .5s ease;
+            cursor: pointer;
+
+            &:last-child {
+                margin-right: none;
+            }
+
+            &:hover {
+                color: $color-button;
+            }
+        }
+
+        &--empty {
+            font-size: $small-size;
+            color: $color-dark-green;
+        }
+    }
+}

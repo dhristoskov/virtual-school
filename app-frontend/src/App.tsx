@@ -8,6 +8,7 @@ import Header from './components/Header/Header';
 import SideMenu from './components/SideMenu/SideMenu';
 import Subjects from './components/Subjects/Subjects';
 import Teachers from './components/Teachers/Teachers';
+import Dashboard from './pages/Dashboard/Dashboard';
 
 const App:React.FC = () => {
 
@@ -16,6 +17,7 @@ const App:React.FC = () => {
       <div style={{ display: 'flex'}}>
           <SideMenu />
           <Switch>
+              <Route exact path='/admin' component={Dashboard} />
               <Route path='/admin/subjects' component={Subjects}/>
               <Route path='/admin/teachers' component={Teachers}/>
           </Switch>
