@@ -8,8 +8,7 @@ const ItemForm = () => {
 
     const [ subject, setSubject ] = useState<Subject>({
         subject_name: '',
-        for_class: '',
-        teachers: []
+        for_class: ''
      });
 
     const { subject_name, for_class } = subject;
@@ -25,23 +24,22 @@ const ItemForm = () => {
         console.log(subject);
         setSubject({
                 subject_name: '',
-                for_class: '',
-                teachers: []
+                for_class: ''
         });
     };
 
     return (
         <div className='subject-container'>
-            <form className='subject-form' onSubmit={onHandleSubmit}>
-                <div className='input-fied'>
+            <form className='subject-container-form' onSubmit={onHandleSubmit}>
+                <div className='subject-container-form--fied'>
                     <input type='text' name='subject_name' placeholder='Subject name'  
                     value={subject_name} onChange={onHandleChange}/>
                 </div>
-                <div className='input-fied'>
+                <div className='subject-container-form--fied'>
                     <input type="text" name='for_class' placeholder='Class'
                     value={for_class} onChange={onHandleChange}/>        
                 </div>
-                <div>
+                <div className='subject-container-form--submit'>
                     <input type="submit" value='Create'/>
                 </div>
             </form>

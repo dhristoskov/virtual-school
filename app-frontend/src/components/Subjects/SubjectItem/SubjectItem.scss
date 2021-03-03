@@ -2,6 +2,7 @@
 @import '../../../styles/font-sizes';
 
 .subjectitem-wrapper {
+    position: relative;
     display: flex;
     align-items: center;
     padding: 5px;
@@ -17,7 +18,9 @@
         color: $color-button;
     }
 
-    &-edit {
+    &-options {
+        position: absolute;
+        right: 10px;
         font-size: 16px;
         color: $color-dark-green;
         transition: all .5s ease;
@@ -35,7 +38,7 @@
     }
     
     &-class {
-        flex-basis: 5%;
+        flex-basis: 10%;
     }
 
     &-icon {

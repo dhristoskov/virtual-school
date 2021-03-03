@@ -16,7 +16,7 @@ const subjectRouter = Router();
 subjectRouter.post('/', 
     [
         check('subject_name', 'Please enter a valid subject name').not().isEmpty().isLength({min: 2, max: 25}),
-        check('for_class', 'Please enter a valid class number').not().isEmpty().isNumeric().isInt({gt: 0}).trim()
+        check('for_class', 'Please enter a valid class').not().isEmpty().trim()
     ],
     addNewSubject
 );
@@ -30,7 +30,7 @@ subjectRouter.delete('/:id', deleteSubject);
 subjectRouter.put('/:id', 
     [
         check('subject_name', 'Please enter a valid subject name').not().isEmpty().isLength({min: 2, max: 25}),
-        check('for_class', 'Please enter a valid class number').not().isEmpty().isNumeric().isInt({gt: 0}).trim()
+        check('for_class', 'Please enter a valid class').not().isEmpty().trim()
     ],
     updateSubjectById
 );

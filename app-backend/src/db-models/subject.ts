@@ -10,7 +10,7 @@ const subjectSchema = new mongoose.Schema({
         maxlength: 25 
     },
     for_class: {
-        type: Number, 
+        type: String, 
         required: true,
     },
     teachers: [{
